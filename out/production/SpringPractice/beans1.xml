@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="data" class="com.spring1.DataService"></bean>
+    <bean id="Network" class="com.spring1.NetworkService"></bean>
+
+    <bean id="airtel" class="com.spring1.Airtel">
+        <property name="service" ref="data"></property>
+    </bean>
+
+    <bean id="jio" class="com.spring1.Jio">
+        <property name="service" ref="Network"></property>
+    </bean>
+</beans>
